@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get 'basic-qr-code-reader', to: 'basic_qr_codes#index'
+  root 'basic_qr_codes#index'
 end
