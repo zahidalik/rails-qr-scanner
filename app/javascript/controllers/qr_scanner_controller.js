@@ -6,7 +6,7 @@ export default class extends Controller {
   connect() {
     const codeReader = new BrowserQRCodeReader();
 
-  codeReader
+    codeReader
     .decodeOnceFromVideoDevice(undefined, 'video')
     .then((result) => {
       // process the result

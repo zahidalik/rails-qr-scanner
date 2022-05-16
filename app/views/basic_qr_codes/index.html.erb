@@ -1,10 +1,14 @@
-<div data-controller="qr-scanner" >
-<h1>QR Code Reader Demo</h1>
+<div data-controller="qr-scanner" class="my-16 w-full" >
+<div class="flex flex-col justify-center items-center">
+  <h1 class="text-xl text-gray-700">Scan your QR code here</h1>
 
-<div>
-  <video id="video" width="500" height="400"></video>
-</div>
+  <div class="my-8 md:w-2/5 w-5/12">
+    <video class="rounded-xl" id="video"></video>
+  </div>
 
-<label>Result:</label>
-<pre><code id="result"></code></pre>
+  <label class="font-bold text-gray-700">Result</label>
+  <div>
+    <code id="result"></code>
+  </div>
+  </div>
 </div>
