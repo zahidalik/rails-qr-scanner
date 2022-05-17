@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-  root 'basic_qr_codes#index'
+  root 'qr_details#index'
+  resources :qr_details
 end

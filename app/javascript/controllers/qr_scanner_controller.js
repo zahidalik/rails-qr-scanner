@@ -12,8 +12,13 @@ export default class extends Controller {
       // process the result
       console.log(result.text)
 
-      document.getElementById('result').textContent = result.text
+      let valueForInput = document.getElementById('qr-result')  //.textContent = result.text
+      valueForInput.value = result.text
     })
     .catch(err => console.error(err));
+  }
+
+  reloadPage() {
+    document.location.reload()
   }
 }

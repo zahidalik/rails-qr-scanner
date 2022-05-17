@@ -1,0 +1,11 @@
+<%= link_to new_qr_detail_path(@qr_detail), class: "mb-2 px-3 py-2 flex justify-center items-center md:text-xl bg-blue-800 hover:bg-blue-900 text-gray-50 rounded-lg" do %>
+  Scan a QR Code
+<% end %>
+
+
+<div class="flex flex-col space-y-2">
+  <div class="flex justify-center items-center text-gray-900 md:text-2xl text-lg font-light">All scanned QR Codes:</div>
+  <% @qr_details.each do |qr_detail| %>
+    <%= render 'qr_details/qr_detail', qr_detail: qr_detail %>
+  <% end %>
+</div>

@@ -1,0 +1,21 @@
+<div data-controller="qr-scanner" class="md:my-2 my-8 w-full" >
+  <div class="flex flex-col justify-center items-center space-y-4">
+    <div class="my-8 md:w-2/5 w-6/12">
+      <video class="rounded-xl" id="video"></video>
+    </div>
+
+    <div>
+      <%= form_for @qr_detail, html: {class: "flex flex-col space-y-2"} do |f| %>
+        <%= f.text_field :name, placeholder: "QR Code name to remember", class: "px-2 py-1 border border-gray-400 rounded-lg focus:outline-none focus:border-2 focus:border-blue-800" %>
+        <%= f.text_field :detail, placeholder: "Scan will appear here", id: "qr-result", class: "px-2 py-1 border border-gray-400 rounded-lg focus:outline-none focus:border-2 focus:border-blue-800" %>
+        <%= f.submit "Save Code", class: "px-4 py-2 bg-blue-800 text-gray-50 hover:bg-blue-900" %>
+      <% end %>
+    </div>
+
+    <div>
+      <%= link_to root_path, data: { action: "click->qr-scanner#reloadPage" }, class: "px-4 py-2 bg-sky-800 text-gray-50 text-sm hover:bg-sky-900" do %>
+        Return to all scans
+      <% end %>
+    </div>
+  </div>
+</div>
